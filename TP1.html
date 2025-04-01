@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de Contact</title>
+    <style>
+        /* Styles généraux pour le formulaire */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+            width: 300px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .radio-group {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <!-- method="post" est utilisé pour envoyer les données de manière sécurisée.-->
+        <form action="#" method="post">
+            <!-- Champ pour le pseudo -->
+            <!--  Champ texte où l’utilisateur entre son pseudo.-->
+            <!-- required impose une validation (l’utilisateur doit remplir ce champ avant de soumettre le formulaire).
+            required impose une validation (l’utilisateur doit remplir ce champ avant de soumettre le formulaire).-->
+            <!-- id="pseudo" Donne un identifiant unique pour manipuler cet élément avec JavaScript.-->
+            <!-- name="email" Définit le nom de la donnée envoyée au serveur quand le formulaire est soumis.-->
+            <label for="pseudo">Pseudo :</label>
+            <input type="text" id="pseudo" name="pseudo" required>
+
+            <!-- Champ pour le mot de passe -->
+            <label for="password">Mot de passe :</label>
+            <!-- type="password" → Indique que c'est un champ de saisie masqué. -->
+            <!-- required → Rend ce champ obligatoire avant l’envoi du formulaire -->
+            <input type="password" id="password" name="password" required>
+
+            <!-- Champ pour l'email -->
+            <label for="email">Email :</label>
+            <!-- type="email" Indique que le champ attend une adresse e-mail.-->
+            <input type="email" id="email" name="email" required>
+
+            <!-- Sélection de l'objet du message -->
+            <label for="objet">Objet du message :</label>
+
+            <!-- Liste déroulante permettant de choisir un sujet prédéfini.-->
+            <select id="objet" name="objet" required>
+                <option value="question">J’ai une question</option>
+                <option value="suggestion">Je fais une suggestion</option>
+                <option value="probleme">Je rencontre un problème</option>
+                <option value="autre">Autre</option>
+            </select>
+
+            <!-- Champ pour le message -->
+            <!-- <label> est utilisé pour associer une étiquette descriptive au champ de saisie.-->
+            <!-- for="message" relie le label à l’élément <textarea> ayant l’attribut id="message".-->
+            <label for="message">Votre message :</label>
+            <!-- <textarea> : Crée une zone de texte où l'utilisateur peut entrer un message de plusieurs lignes.-->
+            <!-- rows="4" : Définit le nombre de lignes visibles (ici, 4 lignes)-->
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <!-- Groupe d'options pour le niveau d'urgence -->
+            <fieldset class="radio-group">
+
+                <!-- <legend> ajoute un titre pour la section -->
+                <legend>Niveau d’urgence :</legend>
+                <input type="radio" id="lent" name="urgence" value="lent" checked>
+                <label for="lent">Lent</label>
+                <input type="radio" id="normal" name="urgence" value="normal">
+                <label for="normal">Normal</label>
+                <input type="radio" id="urgent" name="urgence" value="urgent">
+                <label for="urgent">Urgent</label>
+            </fieldset>
+
+            <!-- Case à cocher pour accepter la politique de confidentialité -->
+            <input type="checkbox" id="confidentialite" name="confidentialite" required>
+            <label for="confidentialite">J’accepte la politique de confidentialité</label>
+
+            <!-- Bouton d'envoi du formulaire -->
+            <button type="submit">Envoyer</button>
+        </form>
+    </div>
+</body>
+</html>
