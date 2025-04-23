@@ -9,7 +9,6 @@ let largeur = 5; // Largeur du rectangle
 let aire = longueur * largeur; // Calcul de l'aire
 console.log("L'aire du rectangle est de",{aire}," cm²");
 
-
 // Exercice 3 : Concaténation prénom + nom
 let prenom = "Maxime";
 let nom = "Antoine";
@@ -49,4 +48,7 @@ if (montantCommande >= montantMinLivraison) {
 let binaire = "1010"; // Nombre binaire sous forme de string
 let decimal = parseInt(binaire, 2); // Conversion en décimal
 console.log("Binaire : ",binaire,"Décimal :",decimal);
+
+
+
 
