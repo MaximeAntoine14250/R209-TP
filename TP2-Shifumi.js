@@ -11,7 +11,7 @@ let choix_joueur = "";
 let choix_ordi = "";
 
 
-for (let i = 0; i <= bouttons.length; i++) {
+for (let i = 0; i < bouttons.length; i++) {
 
     // i vas prendre les valeur 0,1 et 2, a chaque click sur le boutton
     bouttons[i].addEventListener('click', () => {
