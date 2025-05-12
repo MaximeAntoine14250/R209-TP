@@ -1,9 +1,11 @@
 <?php
+// Démarrage de la session pour vérifier si l'utilisateur est déjà connecté
 session_start();
-if (isset($_SESSION['user'])) {
-    header("Location: home.php");
+if (isset($_SESSION['user'])) { // Test si l'utilisateur est déjà dans la session
+    header("Location: home.php"); // L'utilisateur est rediriger vers la page home.php
     exit;
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="fr">

@@ -1,3 +1,4 @@
+<!-- Formulaire HTML qui envoie les données vers contact.php -->
 <form action="contact.php" method="POST" class="mt-4">
     <div class="mb-3">
         <label for="pseudo" class="form-label">Pseudo</label>
